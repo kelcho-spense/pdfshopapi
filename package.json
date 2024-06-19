@@ -1,0 +1,36 @@
+{
+  "name": "social_media_api",
+  "version": "1.0.0",
+  "author": "Kelcho",
+  "license": "ISC",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "start": "node dist/index.js",
+    "build": "tsc",
+    "gen": "drizzle-kit generate:pg",
+    "migrate": "tsx src/drizzle/migrate.ts",
+    "push": "drizzle-kit generate:pg && tsx src/drizzle/migrate.ts",
+    "neon:push":"drizzle-kit push:pg",
+    "studio": "drizzle-kit studio"
+  },
+  "dependencies": {
+    "@hono/node-server": "^1.11.1",
+    "@hono/prometheus": "^1.0.1",
+    "@hono/zod-validator": "^0.2.1",
+    "@neondatabase/serverless": "^0.9.1",
+    "dotenv": "^16.4.5",
+    "drizzle-orm": "^0.30.10",
+    "drizzle-zod": "^0.5.1",
+    "hono": "^4.2.9",
+    "pg": "^8.11.5",
+    "prom-client": "^15.1.2",
+    "zod": "^3.23.5"
+  },
+  "devDependencies": {
+    "@types/node": "^20.12.7",
+    "@types/pg": "^8.11.5",
+    "drizzle-kit": "^0.20.17",
+    "tsx": "^4.7.3",
+    "typescript": "^5.4.5"
+  }
+}

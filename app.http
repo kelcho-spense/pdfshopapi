@@ -1,0 +1,38 @@
+
+
+
+GET http://localhost:8000/api/ok
+###
+GET http://localhost:8000/api/metrics
+###
+GET http://localhost:8000/api/users
+
+###
+GET http://localhost:8000/api/users
+
+###
+GET http://localhost:8000/api/users/111111
+
+###
+POST http://localhost:8000/api/users
+content-type: application/json
+
+{
+    "fullName": "daniel Ngao",
+    "phone": "0712345678",
+    "address": "sample address",    
+    "score": "10"
+
+}
+###
+
+POST https://deployhono.azurewebsites.net/api/users
+content-type: application/json
+
+{
+    "fullName": "daniel Ngao",
+    "phone": "0712345678",
+    "address": "sample address",    
+    "score": 10
+
+}
